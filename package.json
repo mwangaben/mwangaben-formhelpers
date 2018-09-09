@@ -1,0 +1,45 @@
+{
+  "name"       : "mwangaben-formhelpers",
+  "version"    : "1.0.0",
+  "description": "Form Helpersi via axios http form request",
+  "main"       : "index.js",
+  "scripts"    : {
+    "test" : "mocha-webpack --webpack-config=webpack.config.js --require tests/setup.js tests/**/*.spec.js",
+    "watch": "npm run test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url" : "git+https://github.com/mwangaben/mwangaben-formhelpers.git"
+  },
+  "keywords": [
+    "form-helpers",
+    "mwangaben",
+    "axios-form-helpers"
+  ],
+  "author" : "Benedict Mwanga <mwangaben@gmail.com>",
+  "license": "ISC",
+  "bugs"   : {
+    "url": "https://github.com/mwangaben/mwangaben-formhelpers/issues"
+  },
+  "homepage"       : "https://github.com/mwangaben/mwangaben-formhelpers#readme",
+  "devDependencies": {
+    "@vue/test-utils"      : "^1.0.0-beta.25",
+    "babel-preset-env"     : "^1.7.0",
+    "eslint-plugin-vue"    : "^4.7.1",
+    "jsdom"                : "^12.0.0",
+    "jsdom-global"         : "^3.0.2",
+    "mocha"                : "^5.2.0",
+    "mocha-webpack"        : "^2.0.0-beta.0",
+    "moxios"               : "^0.4.0",
+    "mwangaben-vthelpers"  : "^1.2.5",
+    "sinon"                : "^6.2.0",
+    "vue"                  : "^2.5.17",
+    "vue-loader"           : "^15.4.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack"              : "^4.17.2",
+    "webpack-cli"          : "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
