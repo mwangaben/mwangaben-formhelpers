@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 class Errors {
     /**
      * Create a new Errors instance.
@@ -13,7 +15,8 @@ class Errors {
      * @param {string} field
      */
     has(field) {
-        return this.errors.hasOwnProperty(field);
+        return _.has(this.errors, 'errors.' + field);
+        // return this.errors.errors.hasOwnProperty(field);
     }
 
 
@@ -31,9 +34,10 @@ class Errors {
      * @param {string} field
      */
     get(field) {
-        if (this.errors[field]) {
-            return this.errors[field][0];
+        if (_.has(this.errors, 'errors.' + field)) {
+            return this.errors.errors[field][0];
         }
+
     }
 
 
@@ -53,13 +57,16 @@ class Errors {
      * @param {string|null} field
      */
     clear(field) {
-        if (field) {
-            delete this.errors[field];
+        if (field && _.has(this.errors.errors, field)) {
+            delete this.errors.errors[field];
 
             return;
         }
 
-        this.errors = {};
+    }
+
+    claerAll() {
+        this.errors = {}
     }
 }
 
